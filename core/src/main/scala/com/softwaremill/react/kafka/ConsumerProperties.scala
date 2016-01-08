@@ -67,7 +67,8 @@ case class ConsumerProperties[K, V](
     groupId: String,
     keyDeserializer: Deserializer[K],
     valueDeserializer: Deserializer[V],
-    pollTimeout: FiniteDuration = 500 millis
+    pollTimeout: FiniteDuration = 500 millis,
+    pollRetryDelay: FiniteDuration = 500 millis
 ) {
 
   /**
